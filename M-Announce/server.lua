@@ -12,7 +12,7 @@ if GetCurrentResourceName() == "M-Announce" then -- DO NOT REMOVE
 TriggerClientEvent('chat:addSuggestion', -1, '/'..Config.Announce.Command, 'Send an Announcement to the Server.', {{ name="Message", help="The message you would like to announce."}})
 
 RegisterCommand(Config.Announce.Command, function(source, args, raw)
-    if IsPlayerAceAllowed(source, "furiousfoxgg.announce") then 
+    if IsPlayerAceAllowed(source, Config.Announce.Permission) then 
         if args[1] then 
     if Config.Announce.MythicNotify then 
         TriggerClientEvent('mythic_notify:client:SendAlert', -1, { type = 'error', text =  "Announcement: " ..table.concat(args, " ") .. "<br/>By User: " ..GetPlayerName(source):gsub("~%a~", ""):gsub("~italic~", "")})
