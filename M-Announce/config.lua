@@ -11,6 +11,7 @@ Config.Announce = {}
 Config.ScriptEnabled = true
 
 Config.Announce.Command = "announce"
+Config.Announce.Permission = "command.announce"
 --ONLY HAVE ONE AS TRUE
 Config.Announce.MythicNotify = false 
 Config.Announce.tNotify = false 
